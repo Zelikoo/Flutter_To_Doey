@@ -35,7 +35,11 @@ class TaskCheckbox extends StatelessWidget {
   final bool checkboxState;
   final Function toggleCheckbox;
 
-  TaskCheckbox({required this.checkboxState, required this.toggleCheckbox});
+  const TaskCheckbox({
+    super.key,
+    required this.checkboxState,
+    required this.toggleCheckbox,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +48,7 @@ class TaskCheckbox extends StatelessWidget {
       onChanged: (newValue) {
         toggleCheckbox(newValue);
       },
+      activeColor: Colors.lightBlue,
     );
   }
 }
