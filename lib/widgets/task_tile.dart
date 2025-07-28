@@ -42,7 +42,7 @@ class TaskCheckbox extends StatelessWidget {
     return Checkbox(
       value: checkboxState,
       onChanged: (newValue) {
-        toggleCheckbox;
+        toggleCheckbox(newValue);
       },
     );
   }
